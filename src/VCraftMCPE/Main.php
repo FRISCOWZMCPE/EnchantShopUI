@@ -52,18 +52,81 @@ class Main extends PluginBase implements Listener{
                     return;
                 case 6:
                     return;
+                case 7:
+                    return;
+                case 8:
+                    return;
+               case 9:
+                    return;
+                case 10:
+                    return;
+                case 11:
+                    return;
+                case 12:
+                    return;
+                case 13:
+                    return;
+                case 14:
+                    return;
+               case 15:
+                    return;
+                case 16:
+                    return;
+                case 17:
+                    return;
+                case 18:
+                    return;
+                case 19:
+                    return;
+                case 20:
+                    return;
+                case 21:
+                    return;
+                case 22:
+                    return;
+                case 23:
+                    return;
+                case 24:
+                    return;
+                case 25:
+                    return;
+                case 26:
+                    return;
             }
         });
     $form->setTitle("enchant");
         $form->setContent("sdasdasdsa ");
         $form->addButton("Exit");
-        $form->addButton("");
-        $form->addButton("");
-        $form->addButton("");
-        $form->addButton("");
-        $form->addButton("");
-        $form->addButton("");
+        $form->addButton("PROTECTION");
+        $form->addButton("FIRE PROTECTION");
+        $form->addButton("FEATHER FALLING");
+        $form->addButton("BLAST PROTECTION");
+        $form->addButton("PROJECTILE PROTECTION");
+        $form->addButton("THORNS");
+        $form->addButton("RESPIRATION");
+        $form->addButton("DEPTH STRIDER");
+        $form->addButton("AQUA AFFINITY");
+        $form->addButton("SHARPNESS");
+        $form->addButton("SMITE");
+        $form->addButton("BANE OF ARTHROPODS");
+        $form->addButton("KNOCKBACK");
+        $form->addButton("FIRE_ASPECT");
+        $form->addButton("LOOTING");
+        $form->addButton("EFFICIENCY");
+        $form->addButton("SILK_TOUCH");
+        $form->addButton("UNBREAKING");
+        $form->addButton("FORTUNE");
+        $form->addButton("POWER");
+        $form->addButton("PUNCH");
+        $form->addButton("FLAME");
+        $form->addButton("INFINITY");
+        $form->addButton("LUCK_OF_THE_SEA");
+        $form->addButton("LURE");
+        $form->addButton("FROST_WALKER");
+        $form->addButton("MENDING");
         $form->sendToPlayer($player);
+  }
+  public function BuyForm($id){
   }
   
 }
