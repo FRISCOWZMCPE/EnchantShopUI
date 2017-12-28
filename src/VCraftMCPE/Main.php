@@ -134,7 +134,6 @@ class Main extends PluginBase implements Listener{
             $player = $event->getPlayer();
          });
        $form->setTitle("Buy enchantment");
-       $form->setContent("COST ".getCost($id)."");
        $form->addSlider("Level", 1, 5, -1, -1);
        $form->addButton("buy");
   }
