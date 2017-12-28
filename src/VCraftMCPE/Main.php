@@ -132,7 +132,7 @@ class Main extends PluginBase implements Listener{
           var_dump($data);
             $result = $data[0];
             $player = $event->getPlayer();
-        }
+         });
        $form->setTitle("Buy enchantment");
        $form->setContent("COST ".getCost($id)."");
        $form->addSlider("Level", 1, 5, -1, -1);
