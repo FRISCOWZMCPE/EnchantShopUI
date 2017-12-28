@@ -128,5 +128,89 @@ class Main extends PluginBase implements Listener{
   }
   public function BuyForm($id){
   }
+  function getCost($id)
+{
+    switch ($id){
+         case 1:
+                return 10000;
+            break;
+        case 2:
+                return 20000;
+            break;
+        case 3:
+                return 30000;
+            break;
+        case 4:
+                return 40000;
+            break;
+        case 5:
+                return 50000;
+            break;
+        case 6:
+                return 60000;
+            break;
+        case 7:
+                return 70000;
+            break;
+        case 8:
+                return 80000;
+            break;
+        case 9:
+                return 10000;
+            break;
+        case 10:
+                return 20000;
+            break;
+        case 11:
+                return 30000;
+            break;
+        case 12:
+                return 40000;
+            break;
+        case 13:
+                return 50000;
+            break;
+        case 14:
+                return 60000;
+            break;
+        case 15:
+                return 70000;
+            break;
+        case 16:
+                return 80000;
+            break;
+        case 17:
+                return 10000;
+            break;
+        case 18:
+                return 20000;
+            break;
+        case 19:
+                return 30000;
+            break;
+        case 20:
+                return 40000;
+            break;
+        case 21:
+                return 50000;
+            break;
+        case 22:
+                return 60000;
+            break;
+        case 23:
+                return 70000;
+            break;
+        case 24:
+                return 80000;
+            break;
+        case 25:
+                return 70000;
+            break;
+        case 26:
+                return 80000;
+            break;
+            
+        }
+}
   
 }
