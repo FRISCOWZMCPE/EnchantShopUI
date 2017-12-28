@@ -131,9 +131,6 @@ class Main extends PluginBase implements Listener{
         $form = $api->createCustomForm(function (Player $event, array $data){
             $result = $data[1];
             $player = $event->getPlayer();
-          if($result != null){
-                $player->sendMessage($result);
-              }
          });
        $form->setTitle("Buy enchantment");
        $form->addSlider("Level", 1, 5, -1, -1);
