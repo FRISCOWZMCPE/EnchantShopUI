@@ -132,8 +132,6 @@ class Main extends PluginBase implements Listener{
           var_dump($data);
             $result = $data[0];
             $player = $event->getPlayer();
-          if($result === null){
-            }
         }
        $form->setTitle("Buy enchantment");
        $form->setContent("COST ".getCost($id)."");
