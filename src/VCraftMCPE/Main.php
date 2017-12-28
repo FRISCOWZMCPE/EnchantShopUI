@@ -41,57 +41,57 @@ class Main extends PluginBase implements Listener{
                 case 0:
                     return;
                 case 1:
-                    $this->BuyForm(1);
+                    $this->BuyForm(1, $player);
                case 2:
-                    $this->BuyForm(2);
+                    $this->BuyForm(2, $player);
                 case 3:
-                    $this->BuyForm(3);
+                    $this->BuyForm(3, $player);
                 case 4:
-                    $this->BuyForm(4);
+                    $this->BuyForm(4, $player);
                 case 5:
-                    $this->BuyForm(5);
+                    $this->BuyForm(5, $player);
                 case 6:
-                    $this->BuyForm(6);
+                    $this->BuyForm(6, $player);
                 case 7:
-                    $this->BuyForm(7);
+                    $this->BuyForm(7, $player);
                 case 8:
-                    $this->BuyForm(8);
+                    $this->BuyForm(8, $player);
                case 9:
-                    $this->BuyForm(9);
+                    $this->BuyForm(9, $player);
                 case 10:
-                    $this->BuyForm(10);
+                    $this->BuyForm(10, $player);
                 case 11:
-                    $this->BuyForm(11);
+                    $this->BuyForm(11, $player);
                 case 12:
-                    $this->BuyForm(12);
+                    $this->BuyForm(12, $player);
                 case 13:
-                    $this->BuyForm(13);
+                    $this->BuyForm(13, $player);
                 case 14:
-                    $this->BuyForm(14);
+                    $this->BuyForm(14, $player);
                 case 15:
-                    $this->BuyForm(15);
+                    $this->BuyForm(15, $player);
                 case 16:
-                    $this->BuyForm(16);
+                    $this->BuyForm(16, $player);
                 case 17:
-                    $this->BuyForm(17);
+                    $this->BuyForm(17, $player);
                 case 18:
-                    $this->BuyForm(18);
+                    $this->BuyForm(18, $player);
                 case 19:
-                    $this->BuyForm(19);
+                    $this->BuyForm(19, $player);
                 case 20:
-                    $this->BuyForm(20);
+                    $this->BuyForm(20, $player);
                 case 21:
-                    $this->BuyForm(21);
+                    $this->BuyForm(21, $player);
                 case 22:
-                    $this->BuyForm(22);
+                    $this->BuyForm(22, $player);
                 case 23:
-                    $this->BuyForm(23);
+                    $this->BuyForm(23, $player);
                 case 24:
-                    $this->BuyForm(24);
+                    $this->BuyForm(24, $player);
                 case 25:
-                    $this->BuyForm(25);
+                    $this->BuyForm(25, $player);
                 case 26:
-                    $this->BuyForm(26);
+                    $this->BuyForm(26, $player);
             }
         });
     $form->setTitle("enchant");
@@ -126,8 +126,16 @@ class Main extends PluginBase implements Listener{
         $form->addButton("MENDING");
         $form->sendToPlayer($player);
   }
-  public function BuyForm($id){
+  public function BuyForm($id, $player){
+    $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+        $form = $api->createSimpleForm(function (Player $event, array $data){
+            $result = $data[0];
+            $player = $event->getPlayer();
+          if($result === null){
+            }
+        }
   }
+  
   function getCost($id)
 {
     switch ($id){
