@@ -4,7 +4,7 @@ namespace VCraftMCPE;
 use pocketmine\{Player, Server};
 use pocketmine\plugin\PluginBase;
 
-use pocketmine\utils\{TextFormat};
+use pocketmine\utils\TextFormat;
 
 use pocketmine\item\Item;
 use pocketmine\item\enchantment\Enchantment;
@@ -15,23 +15,20 @@ use onebone\economyapi\EconomyAPI;
 
 class Main extends PluginBase implements Listener{
   
+  const COMMAND_NAME = "enchantui";
+  const FORM_API = "FormAPI";
+  
   public function onEnable(){
         $this->getLogger()->info("Enchant GUI has been  enabled");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
    public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool{
-        $player = $sender->getPlayer();
-     $cd = strtolower($cmd->getName());
-        switch ($cd){
-            case "enchantui":
-                $this->EnchantForm($player);
-                break;
-        }
+        if(strtolower($cmd->getName()) === self::COMMAND_NAME and $sender instanceof Player) $this->EnchantForm($sender);
         return true;
     }
   public function EnchantForm($player){
-    $plugin = $this->getServer()->getPluginManager();
-        $formapi = $plugin->getPlugin("FormAPI");
+        $plugin = $this->getServer()->getPluginManager();
+        $formapi = $plugin->getPlugin(self::FORM_API);
         $form = $formapi->createSimpleForm(function (Player $event, array $args){
             $result = $args[0];
             $player = $event->getPlayer();
@@ -94,9 +91,9 @@ class Main extends PluginBase implements Listener{
                     $this->BuyForm(26, $player);
             }
         });
-    $form->setTitle("enchant");
-        $form->setContent("sdasdasdsa ");
-        $form->addButton("Exit");
+        $form->setTitle("enchant");
+        $form->setContent("Enchants.");
+        $form->addButton(TextFormat::RED . "Exit");
         $form->addButton("PROTECTION");
         $form->addButton("FIRE PROTECTION");
         $form->addButton("FEATHER FALLING");
@@ -127,7 +124,7 @@ class Main extends PluginBase implements Listener{
         $form->sendToPlayer($player);
   }
   public function BuyForm($id, $player){
-    $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+    $api = $this->getServer()->getPluginManager()->getPlugin(self::FORM_API);
         $form = $api->createCustomForm(function (Player $event, array $data){
             $result = $data[1];
             $player = $event->getPlayer();
@@ -138,7 +135,7 @@ class Main extends PluginBase implements Listener{
   }
   
   function getCost($id)
-{
+  {
     switch ($id){
          case 1:
                 return 10000;
@@ -220,6 +217,6 @@ class Main extends PluginBase implements Listener{
             break;
             
         }
-}
+  }
   
 }
